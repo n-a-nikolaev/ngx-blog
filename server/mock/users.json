@@ -1,0 +1,20 @@
+[
+  {
+    "username": "admin",
+    "authority": 1,
+    "password": "Pt4bvZSSI4KN4g",
+    "enabled": 1
+  },
+  {
+    "username": "editor",
+    "authority": 2,
+    "password": "ANz75xWo3n2J3Y",
+    "enabled": 1
+  },
+  {
+    "username": "contributor",
+    "authority": 3,
+    "password": "ANz75xWo3n2J3Y",
+    "enabled": 1
+  }
+]

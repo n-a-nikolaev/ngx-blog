@@ -6,12 +6,13 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminPostsComponent } from './admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminTranslationsComponent } from './admin-translations/admin-translations.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AuthGuard } from '../core/guards/auth.guard';
 
 const routes: Routes = [
     {
         path: 'admin',
         component: AdminComponent,
+        canActivate: [AuthGuard],
         children: [
             {
                 path: '',
@@ -28,10 +29,6 @@ const routes: Routes = [
             {
                 path: 'translations',
                 component: AdminTranslationsComponent
-            },
-            {
-                path: 'login',
-                component: AdminLoginComponent
             }
         ]
     }

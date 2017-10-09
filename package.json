@@ -11,7 +11,8 @@
     "watch:client": "ng serve --proxy-config proxy.conf.json",
     "watch:server": "nodemon ./server/index.js",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "seed-db": "node ./server/seed-db.js"
   },
   "private": true,
   "dependencies": {

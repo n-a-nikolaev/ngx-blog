@@ -3,7 +3,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 
 import { LoginData } from '../../shared/interface/login-data.interface';
 import { TokenService } from './token.service';
-import { APP_CONFIG } from '../config/main.config';
+import { APP_CONFIG } from '../../config/main.config';
 
 @Injectable()
 export class AuthService {

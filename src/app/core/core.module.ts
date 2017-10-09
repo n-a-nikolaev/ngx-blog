@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TokenService } from './services/token.service';
 import { AuthService } from './services/auth.service';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AuthService } from './services/auth.service';
   ],
   providers: [
     TokenService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   declarations: []
 })
