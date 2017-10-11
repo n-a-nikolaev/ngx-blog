@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TokenService } from './services/token.service';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   imports: [
@@ -15,9 +12,7 @@ import { AuthGuard } from './guards/auth.guard';
     ReactiveFormsModule
   ],
   providers: [
-    TokenService,
-    AuthService,
-    AuthGuard
+    
   ],
   declarations: []
 })

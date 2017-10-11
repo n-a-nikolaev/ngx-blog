@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,11 @@ import { PublicRoutingModule } from './public/public-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { AppMaterialModule } from './core/material.module';
 
+import { TokenService } from './core/services/token.service';
+import { AuthService } from './core/services/auth.service';
+import { ApiService } from './core/services/api.service';
+import { AuthGuard } from './core/guards/auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +26,8 @@ import { AppMaterialModule } from './core/material.module';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    ReactiveFormsModule,
     CoreModule,
     AppMaterialModule,
     SharedModule,
@@ -28,7 +37,12 @@ import { AppMaterialModule } from './core/material.module';
     PublicRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    TokenService,
+    AuthService,
+    ApiService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
