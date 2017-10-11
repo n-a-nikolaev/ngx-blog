@@ -1,0 +1,16 @@
+{
+    "LOGIN": {
+        "PAGE_HEADING": "Sign in",
+        "PLACEHOLDER_USERNAME": "Username",
+        "PLACEHOLDER_PASSWORD": "Password",
+        "LOGIN_BTN_TEXT": "Login"
+    },
+    "NAVIGATION": {
+        "HOME": "Home",
+        "POSTS": "Posts",
+        "VIDEO": "Video"
+    },
+    "HOME": {
+        "PAGE_HEADING": "<h2 class='page-heading'>Welcome to my simple blog application</h2>"
+    }
+}

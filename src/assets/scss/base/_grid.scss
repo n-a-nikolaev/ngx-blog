@@ -1,0 +1,32 @@
+// grid container
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  // grid item
+  .col {
+    padding: 0.5rem;
+  }
+  
+  // loop over the breakpoints
+  @each $key, $value in $breakpoints {
+      @debug $key, $value;
+      .container {
+        @include break($key) {
+          width: #{$value - 2rem};
+        }
+      }
+    @for $i from 1 through $items {
+      .col-#{$key}-#{$i} {
+        flex: 0 0 100%;
+        @include break($key) {
+          flex: 0 0 #{$i / $items * 100%};
+        }
+      }
+    }
+  }

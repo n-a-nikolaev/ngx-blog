@@ -1,4 +1,5 @@
-export const APP_CONFIG: any = {
+export const AppConfig: any = {
     tokenKey: 'token',
-    loginUrl: '/login'
+    loginUrl: '/login',
+    defaultLang: 'en'
 };

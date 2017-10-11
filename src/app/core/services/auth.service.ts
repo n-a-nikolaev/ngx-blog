@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { LoginData } from '../../shared/interface/login-data.interface';
 import { TokenService } from './token.service';
-import { APP_CONFIG } from '../../config/main.config';
+import { AppConfig } from '../../config/main.config';
 import { ApiService } from './api.service';
 
 @Injectable()
@@ -29,6 +29,6 @@ export class AuthService {
      * @memberof AuthService
      */
     public isLoggedIn(): boolean {
-        return this.tokenService.get() && tokenNotExpired(APP_CONFIG.tokenKey);
+        return this.tokenService.get() && tokenNotExpired(AppConfig.tokenKey);
     }
 }

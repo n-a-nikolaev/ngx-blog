@@ -1,4 +1,12 @@
-<md-toolbar color="primary">
-  <a [routerLink]="['contacts']" md-button>Contacts</a>
-  <a [routerLink]="['new']" md-button>Add Contact</a>
-</md-toolbar>
+<mat-toolbar color="primary">
+  <nav>
+    <ul class="nav-list clearfix">
+      <li *ngFor="let link of links">
+        <a [routerLink]="link.route" mat-button>{{ link.label | translate }}</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+  <app-lang-switcher></app-lang-switcher> 
+</mat-toolbar>

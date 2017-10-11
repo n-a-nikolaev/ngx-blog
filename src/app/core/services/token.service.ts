@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { APP_CONFIG } from '../../config/main.config';
+import { AppConfig } from '../../config/main.config';
 
 @Injectable()
 export class TokenService {
@@ -12,7 +12,7 @@ export class TokenService {
      * @memberof TokenService
      */
     public get(): string {
-        return localStorage.getItem(APP_CONFIG.tokenKey);
+        return localStorage.getItem(AppConfig.tokenKey);
     }
 
     /**
@@ -23,7 +23,7 @@ export class TokenService {
      * @memberof TokenService
      */
     public set(token: string): void {
-        localStorage.setItem(APP_CONFIG.tokenKey, token);
+        localStorage.setItem(AppConfig.tokenKey, token);
     }
 
     /**
@@ -33,6 +33,6 @@ export class TokenService {
      * @memberof TokenService
      */
     public remove(): void {
-        localStorage.removeItem(APP_CONFIG.tokenKey);
+        localStorage.removeItem(AppConfig.tokenKey);
     }
 }

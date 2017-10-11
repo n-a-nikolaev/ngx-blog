@@ -1,4 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
 .full-width {
     display: block;
     width: 100%;
+}
+
+.page-heading {
+  margin: 3rem 0 1rem;
+  padding: 0 0 1rem;
+  font-size: 3rem;
+}
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+.clearfix {
+  @include clearfix;
 }

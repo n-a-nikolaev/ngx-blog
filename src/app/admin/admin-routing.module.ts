@@ -7,6 +7,7 @@ import { AdminPostsComponent } from './admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { AdminTranslationsComponent } from './admin-translations/admin-translations.component';
 import { AuthGuard } from '../core/guards/auth.guard';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,10 @@ const routes: Routes = [
                 component: AdminTranslationsComponent
             }
         ]
+    },
+    {
+        path: 'login',
+        component: AdminLoginComponent
     }
 ];
 

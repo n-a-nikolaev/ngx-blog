@@ -4,14 +4,19 @@ import { AuthService } from '../../core/services/auth.service';
 import { LoginData } from '../../shared/interface/login-data.interface';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-admin-login',
+  templateUrl: './admin-login.component.html',
+  styleUrls: ['./admin-login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class AdminLoginComponent implements OnInit {
 
   public loginForm: FormGroup;
-
+  public translations: any = {
+    page_heading: 'LOGIN.PAGE_HEADING',
+    placeholder_username: 'LOGIN.PLACEHOLDER_USERNAME',
+    placeholder_password: 'LOGIN.PLACEHOLDER_PASSWORD',
+    login_btn_text: 'LOGIN.LOGIN_BTN_TEXT'
+  }
   constructor(
     private formBuilder: FormBuilder,
     private auth: AuthService
