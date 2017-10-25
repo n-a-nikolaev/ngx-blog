@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslatePipe } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslatePipe, TranslateDefaultParser } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TokenService,
     AuthService,
     ApiService,
-    AuthGuard
+    AuthGuard,
+    TranslateDefaultParser
   ],
   bootstrap: [AppComponent]
 })

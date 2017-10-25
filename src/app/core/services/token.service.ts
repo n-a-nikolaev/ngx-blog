@@ -5,34 +5,34 @@ import { AppConfig } from '../../config/main.config';
 @Injectable()
 export class TokenService {
     /**
-     * @name get
+     * @name getToken
      * @description Get token from localStorage
      * 
      * @returns {string} 
      * @memberof TokenService
      */
-    public get(): string {
+    public getToken(): string {
         return localStorage.getItem(AppConfig.tokenKey);
     }
 
     /**
-     * @name set
+     * @name setToken
      * @description Save token to localStorage
      * 
      * @param {string} token - jwt token
      * @memberof TokenService
      */
-    public set(token: string): void {
+    public setToken(token: string): void {
         localStorage.setItem(AppConfig.tokenKey, token);
     }
 
     /**
-     * @name remove
+     * @name removeToken
      * @description Remove token from localStorage
      * 
      * @memberof TokenService
      */
-    public remove(): void {
+    public removeToken(): void {
         localStorage.removeItem(AppConfig.tokenKey);
     }
 }

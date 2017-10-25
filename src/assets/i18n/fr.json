@@ -12,5 +12,8 @@
     },
     "HOME": {
         "PAGE_HEADING": "<h2 class='page-heading'>Bienvenue dans mon application de blog simple</h2>"
+    },
+    "ERROR": {
+        "GENERAL": "Quelque chose s'est mal passé"
     }
 }

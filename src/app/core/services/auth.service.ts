@@ -29,6 +29,6 @@ export class AuthService {
      * @memberof AuthService
      */
     public isLoggedIn(): boolean {
-        return this.tokenService.get() && tokenNotExpired(AppConfig.tokenKey);
+        return this.tokenService.getToken() && tokenNotExpired(AppConfig.tokenKey);
     }
 }

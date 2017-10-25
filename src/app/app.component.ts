@@ -10,12 +10,8 @@ import { AppConfig } from './config/main.config';
 })
 export class AppComponent {
   constructor(private translate: TranslateService) {
-
     translate.addLangs(LangConfig.map(lang => { return lang.code }));
     translate.setDefaultLang(AppConfig.defaultLang);
-
-    let browserLang: string = translate.getBrowserLang();
-    // TODO: make match dynamic
-    translate.use(browserLang.match(/en|fr/) ? browserLang : AppConfig.defaultLang);
+    translate.use(AppConfig.defaultLang);
   }
 }
